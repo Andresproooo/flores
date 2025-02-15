@@ -12,6 +12,11 @@ app.get('/FLORES', (req, res) => {
     res.render('FLORES');
 });
 
+//rutaa hacia 
+app.get('/alfajores', (req, res) => {
+    res.render('alfajores');
+});
+
 app.listen(3000, () => {
     console.log('Escuchando en el puerto 3000');
 });

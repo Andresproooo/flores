@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(303, 50%, 80%);
+    overflow: hidden;
+}
+.poema {
+
+    position: absolute;
+    font-size: x-large;
+    top: 20%;
+    text-align: center;
+ 
+    
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    width: 120px;
+    height: 80px;
+    background-color: #82603ef0;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.lid {
+    width: 120px;
+    height: 40px;
+    background-color: #de983090;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.box.open .lid {
+    transform: rotateX(140deg);
+    transform-origin: top;
+}
+
+.fireworks {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.box.open + .fireworks {
+    opacity: 1;
+}
+
+.emoji {
+    font-size: 24px;
+    animation: explode 1s ease-in-out infinite alternate;
+}
+
+@keyframes explode {
+    0% { transform: translateY(0) scale(0.8); opacity: 0; }
+    100% { transform: translateY(-50px) scale(1.2); opacity: 1; }
+}
+
+.emoji:nth-child(1) { animation-delay: 0s; }
+.emoji:nth-child(2) { animation-delay: 0.2s; }
+.emoji:nth-child(3) { animation-delay: 0.4s; }
+.emoji:nth-child(4) { animation-delay: 0.6s; }
+.emoji:nth-child(5) { animation-delay: 0.8s; }

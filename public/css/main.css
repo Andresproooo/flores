@@ -1360,7 +1360,22 @@ body {
   width: 100%; /* Ocupar todo el ancho */
   filter: invert(1) brightness(0.5); /* Hace que los controles sean oscuros */
 }
-
+.choco {
+  position: absolute;
+  top: 26%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.choco a {
+  color: white;
+  text-decoration: none;
+}
 #play-music {
   position: absolute;
   top: 10%;
