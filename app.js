@@ -16,7 +16,13 @@ app.get('/FLORES', (req, res) => {
 app.get('/alfajores', (req, res) => {
     res.render('alfajores');
 });
-
+ //ruta hacia carta y new
+app.get('/carta', (req, res) => {
+    res.render('carta');
+})
+app.get('/new', (req, res) => {
+    res.render('new');
+})
 app.listen(3000, () => {
     console.log('Escuchando en el puerto 3000');
 });
